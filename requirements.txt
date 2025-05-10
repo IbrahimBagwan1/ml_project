@@ -6,4 +6,5 @@ seaborn
 scipy
 tensorflow
 xgboost
--e .
+dill
+# -e .
