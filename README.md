@@ -1,5 +1,11 @@
 # ML Project: End-to-End Deployment
+## Screenshots
 
+### Home Page
+![Home Page](home_page.png)
+
+### Prediction Page
+![Prediction Page](predict_page.png)
 This repository contains an end-to-end machine learning project, from data preprocessing to model deployment. The project demonstrates the complete lifecycle of a machine learning application.
 
 ## Repository Link
