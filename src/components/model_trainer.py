@@ -27,4 +27,16 @@ class ModelTriner:
     self.model_trainer_config = ModelTrainerConfig()
 
   def initiate_model_trainer(self, train_array, test_array):
-    pass
+    try:
+      logging.info("Splitting Train and Test data")
+      X_train, y_train, X_test, y_test = (
+        train_array[:,:-1],
+        train_array[:,-1],
+        test_array[:,:-1]
+        test_array[:,-1]
+      )
+
+    except Exception as e:
+      raise CustomException(e,sys)
+
+
