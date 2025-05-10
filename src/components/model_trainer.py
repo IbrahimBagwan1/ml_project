@@ -54,6 +54,19 @@ class ModelTriner:
       best_model_name = list(model_report.keys())[
         list(model_report.values()).index(best_model_score)
       ]
+      best_model = models[best_model_name]
+      
+      logging.info("Best Model found on training and testing dataset")
+
+      save_obj(
+        file_path=self.model_trainer_config.trained_model_file_path,
+        obj=best_model
+      )
+
+      predicted = best_model.predict(X_test)
+      r2_square = r2_score(y_test, predicted)
+      return r2_square
+    
 
     except Exception as e:
       raise CustomException(e,sys)
