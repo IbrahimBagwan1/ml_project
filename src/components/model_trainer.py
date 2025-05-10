@@ -41,10 +41,10 @@ class ModelTriner:
         "Decision Tree" : DecisionTreeRegressor(),
         "Gradient Boosting" : GradientBoostingRegressor(),
         "Linear Regression" : LinearRegression(),
-        "K-Neighbors Classifier" : KNeighborsRegressor(),
-        "XGB Classifier" : XGBRegressor(),
-        "CatBoosting Classifier" : CatBoostRegressor(),
-        "AdaBoost Classifer" : AdaBoostRegressor()
+        "K-Neighbors Regressor" : KNeighborsRegressor(),
+        "XGB Regressor" : XGBRegressor(),
+        "CatBoosting Regressor" : CatBoostRegressor(verbose=False),
+        "AdaBoost Regressor" : AdaBoostRegressor()
       }
 
       model_report:dict = evaluate_model(X_train=X_train,y_train=y_train, X_test=X_test, y_test=y_test, 
